@@ -1,0 +1,15 @@
+[
+    {
+        "caption": "Media Query: Select",
+        "command": "select",
+    },{
+        "caption": "Media Query: Next",
+        "command": "next",
+    },{
+        "caption": "Media Query: Panel",
+        "command": "panel",
+    },{
+        "caption": "Media Query: Fold Toggle",
+        "command": "fold_toggle",
+    },
+]

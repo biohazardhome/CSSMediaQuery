@@ -1,0 +1,17 @@
+[{
+	"keys": ["ctrl+alt+."],
+	"command": "select",
+	/*"context": [{
+		"key": "css_media_query_helper.finded"
+	}],*/
+	"args": {"eval_type": "eval"}
+},{
+	"keys": ["ctrl+alt+,"],
+	"command": "next",
+},{
+	"keys": ["ctrl+alt+m"],
+	"command": "panel",
+},{
+	"keys": ["ctrl+alt+n"],
+	"command": "fold_toggle",
+}]

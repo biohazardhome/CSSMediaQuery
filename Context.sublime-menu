@@ -1,0 +1,23 @@
+[
+    {
+        "caption": "CSSMediaQuery",
+        "children": [
+            {
+                "command": "next",
+                "args": {},
+                "caption": "Next media"
+            },
+            {
+                "command": "panel",
+                "args": {},
+                "caption": "Panel list"
+            },
+            {
+                "command": "fold_toggle",
+                "args": {},
+                "caption": "Fold Toggle"
+            }
+        ]
+    },
+    
+]

@@ -1,0 +1,110 @@
+[{
+	"id": "preferences",
+	"children": [{
+		"id": "package-settings",
+		"children": [{
+			"caption": "CSSMediaQuery",
+			/*"command": "edit_settings",
+			"args": {
+				"base_file": "${packages}/Autoprefixer/Autoprefixer.sublime-settings",
+				"default": "{\n\t$0\n}\n"
+			},*/
+			"children": [
+				{
+	                "command": "open_file",
+	                "args": {
+	                    "file": "${packages}/CSSMediaQuery/CSSMediaQuery.sublime-settings"
+	                },
+	                "caption": "Settings – Default"
+	            },
+	            {
+	                "command": "open_file",
+	                "args": {
+	                    "file": "${packages}/User/CSSMediaQuery.sublime-settings"
+	                },
+	                "caption": "Settings – User"
+	            },
+	            { "caption": "-" },
+	            {
+	                "command": "open_file",
+	                "args": {
+	                    "file": "${packages}/CSSMediaQuery/Default.sublime-keymap"
+	                },
+	                "caption": "Key Bindings – Default"
+	            },
+	            {
+	                "command": "open_file",
+	                "args": {
+	                    "file": "${packages}/User/Default (Windows).sublime-keymap",
+	                    "platform": "Windows"
+	                },
+	                "caption": "Key Bindings – User"
+	            },
+	            {
+	                "command": "open_file",
+	                "args": {
+	                    "file": "${packages}/User/Default (OSX).sublime-keymap",
+	                    "platform": "OSX"
+	                },
+	                "caption": "Key Bindings – User"
+	            },
+	            {
+	                "command": "open_file",
+	                "args": {
+	                    "file": "${packages}/User/Default (Linux).sublime-keymap",
+	                    "platform": "Linux"
+	                },
+	                "caption": "Key Bindings – User"
+	            },
+	            /*{ "caption": "-" },
+	            {
+	                "command": "open_file",
+	                "args": {
+	                    "file": "${packages}/CSSMediaQuery/Default.sublime-mousemap"
+	                },
+	                "caption": "Mouse Bindings – Default"
+	            },
+	            {
+	                "command": "open_file",
+	                "args": {
+	                    "file": "${packages}/User/Default (Windows).sublime-mousemap",
+	                    "platform": "Windows"
+	                },
+	                "caption": "Mouse Bindings – User"
+	            },
+	            {
+	                "command": "open_file",
+	                "args": {
+	                    "file": "${packages}/User/Default (OSX).sublime-mousemap",
+	                    "platform": "OSX"
+	                },
+	                "caption": "Mouse Bindings – User"
+	            },
+	            {
+	                "command": "open_file",
+	                "args": {
+	                    "file": "${packages}/User/Default (Linux).sublime-mousemap",
+	                    "platform": "Linux"
+	                },
+	                "caption": "Mouse Bindings – User"
+            	},*/
+            	{ "caption": "-" },
+            	{
+	                "command": "open_file",
+	                "args": {
+	                    "file": "${packages}/CSSMediaQuery/CSSMediaQuery.sublime-commands",
+	                },
+	                "caption": "Commands"
+	            },
+	            { "caption": "-" },
+            	{
+	                "command": "open_file",
+	                "args": {
+	                    "file": "${packages}/CSSMediaQuery/Main.sublime-menu",
+	                },
+	                "caption": "Main Menu"
+	            },
+        	]
+		}]
+	}]
+}]
