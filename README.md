@@ -1,5 +1,5 @@
-# CSSMediaQuery
-Sublime Text 3 plugin for css files with media queries
+# Sublime Text 3 plugin CSSMediaQuery
+Sublime Text 3 plugin for css files with media queries, highlight, fold and select next media query
 
 ## Hotkeys
 *Ctrl+Alt+,* - Toggle to next media query
@@ -26,4 +26,4 @@ Using Command Palette *Ctrl+Shift+P* find "Media Query: Next"
 }]
 ```
 
-, you can add a setting like this to your .sublime-keymap file (eg: Packages/User/Default (Linux).sublime-keymap):
+you can add a setting like this to your .sublime-keymap file (eg: Packages/User/Default (Linux).sublime-keymap):
