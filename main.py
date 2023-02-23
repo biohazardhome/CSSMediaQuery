@@ -36,22 +36,18 @@ import string
 class Plugin():
 
 	SETTINGS_FILE_NAME = 'CSSMediaQuery.sublime-settings'
-	settings = []
-	# settings = {}
+	# settings = []
+	settings = {}
 	
 	def __init__(self, window):
 		self.window = window
 
 	def init():
 		Plugin.load_settings()
-		# self.load_settings()
 
 	def load_settings():
 		Plugin.settings = sublime.load_settings(Plugin.SETTINGS_FILE_NAME)
 		return Plugin.settings
-
-		# self.settings = sublime.load_settings(self.SETTINGS_FILE_NAME)
-		# return self.settings
 
 	# def load_settings(self):
 	# 	self.settings = sublime.load_settings(self.SETTINGS_FILE_NAME)
@@ -61,7 +57,6 @@ class Plugin():
 	def reload_settings(self):
 		pass
 
-	# @classmethod
 	@staticmethod
 	def get_windows():
 		return sublime.windows()
@@ -117,6 +112,9 @@ class Plugin():
 class CssMediaQueryListener(sublime_plugin.ViewEventListener):
 # class CssMediaQueryListener(object):
 
+	view = None
+	window = None
+
 	def __init__(self, view):
 		# super(CssMediaQueryListener, self).__init__(view)
 		# super().__init__(view)
@@ -124,6 +122,12 @@ class CssMediaQueryListener(sublime_plugin.ViewEventListener):
 
 		self.view = view
 		self.window = view.window()
+
+		sublime.listener = self
+
+		self.statusNearestMedia()
+		self.highlightMediaRegions(regionHighlight = True)
+		
 		# self.settings = []
 
 		# self.finded = []
@@ -156,12 +160,15 @@ class CssMediaQueryListener(sublime_plugin.ViewEventListener):
 	# 	return wrapper
 
 	# @decorator_extension_limit
+	@decorator_logging_name_method
 	def on_init(self):
-		print('on_init')
+		# print('on_init')
+		pass
 
 	# @decorator_extension_limit
+	@decorator_logging_name_method
 	def on_load(self):
-		print('on_load')
+		# print('on_load')
 		
 		# self.view.insert(edit, 0, "Hello, World!")
 		# print(123, self.window)
@@ -173,7 +180,7 @@ class CssMediaQueryListener(sublime_plugin.ViewEventListener):
 	# @decorator_extension_limit
 	@decorator_logging_name_method
 	def on_activated(self):
-		print('on_activated')
+		# print('on_activated')
 
 		sublime.listener = self
 
@@ -181,15 +188,17 @@ class CssMediaQueryListener(sublime_plugin.ViewEventListener):
 		self.highlightMediaRegions(regionHighlight = True)
 
 	# @decorator_extension_limit
+	@decorator_logging_name_method
 	def on_modified(self):
-		print('on_modified')
+		# print('on_modified')
 
 		self.statusNearestMedia()
 		self.highlightMediaRegions(regionHighlight = True)
 
 	# @decorator_extension_limit
+	@decorator_logging_name_method
 	def on_selection_modified(self):
-		print('on_selection_modified')
+		# print('on_selection_modified')
 
 		self.statusNearestMedia()
 		self.highlightMediaRegions(regionHighlight = True)
