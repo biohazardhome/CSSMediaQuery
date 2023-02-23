@@ -41,17 +41,22 @@ class FoldToggleCommand(sublime_plugin.TextCommand):
 		# print(prevSelRegions)
 		self.view.sel().add_all(prevSelRegions)
 
+	def get_regions(self):
+		return self.view.get_regions('regions-media')
+
+	def is_regions(self):
+		regions = self.get_regions()
+		return len(regions) > 0
+
 	# Visible in command palette menu
 	def is_visible(self):
-		return True
+		regions = self.view.get_regions('regions-media')
+		return self.is_regions()
+		# return True
 
 	def is_enabled(self):
-		# print(Plugin)
 		settings = Plugin.load_settings()
 		Plugin.settings = settings
-		# print(settings)
-		# print(settings.get('file_extensions'))
-		# print(Plugin.settings)
 
-		return Plugin.view_active_in_extension()
+		return self.is_regions() and Plugin.view_active_in_extension()
 		# return True
